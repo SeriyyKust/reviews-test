@@ -11,7 +11,7 @@ cd reviews-test
 poetry install
 poetry shell
 cd src
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
 На данный момент переменные окружения не используются - их настраивать не нужно
