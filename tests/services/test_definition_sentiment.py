@@ -1,4 +1,5 @@
 from src.reviews.static import StatusSentiment
+
 from .fixture import get_definition_sentiment_service
 
 
@@ -36,5 +37,3 @@ def test_neutral_sentiment_hard(get_definition_sentiment_service):
     definition_sentiment_service = get_definition_sentiment_service
     text = "Это супер тест с великолепно сформированной целью но ужасно простой и плохо написанный"
     assert definition_sentiment_service.execute(text) == StatusSentiment.neutral
-
-

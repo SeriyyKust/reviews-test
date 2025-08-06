@@ -1,5 +1,6 @@
 import re
-from reviews.static import StatusSentiment, GOOD_WORDS, BAD_WORDS
+
+from reviews.static import BAD_WORDS, GOOD_WORDS, StatusSentiment
 
 
 class DefinitionSentimentService:
@@ -29,6 +30,5 @@ class DefinitionSentimentService:
 # В дальнейшем мы можем вынести слова в отдельный файл и подгружать их оттуда
 # На данный момент слова определены статично в коде
 definition_sentiment_service = DefinitionSentimentService(
-    good_words=GOOD_WORDS,
-    bad_words=BAD_WORDS
+    good_words=GOOD_WORDS, bad_words=BAD_WORDS
 )

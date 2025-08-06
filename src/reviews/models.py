@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from database import Base
-from reviews.static import StatusSentiment, MAX_LENGTH_REVIEW_TEXT
+from reviews.static import MAX_LENGTH_REVIEW_TEXT, StatusSentiment
 from sqlalchemy import CheckConstraint, Enum, String
 from sqlalchemy.orm import Mapped, mapped_column
 
