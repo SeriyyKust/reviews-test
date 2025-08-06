@@ -2,6 +2,7 @@ from contextlib import asynccontextmanager
 
 from database import Base, database_engine
 from fastapi import FastAPI
+from reviews.router import router as reviews_router
 
 
 @asynccontextmanager
@@ -16,3 +17,4 @@ async def database_lifespan(_app: FastAPI):
 
 
 app = FastAPI(lifespan=database_lifespan)
+app.include_router(reviews_router)
